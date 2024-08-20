@@ -15,10 +15,10 @@ Section about Role-Based Acces Control (RBAC) commands
 Link: https://learn.microsoft.com/en-us/azure/role-based-access-control/tutorial-custom-role-powershell
 
 - Copy base policy to Json
-    - `Get-AzRoleDefinition -Name "Reader" | ConvertTo-Json`
+`Get-AzRoleDefinition -Name "Reader" | ConvertTo-Json`
 - Change json output
 - Add new role based on Json
-    -`New-AzRoleDefinition -InputFile "C:\CustomRoles\ReaderSupportRole.json"`
+`New-AzRoleDefinition -InputFile "C:\CustomRoles\ReaderSupportRole.json"`
 
 ### Get all custom roles
 `Get-AzRoleDefinition | ? {$_.IsCustom -eq $true} | FT Name, IsCustom`
